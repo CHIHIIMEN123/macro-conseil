@@ -1,0 +1,258 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('images/back.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.main-title {
+    color: #fff; /* Change la couleur du texte en blanc */
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 2.5em; /* Augmente la taille de la police */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.ftnt-navigation {
+    background-color: rgba(51, 51, 51, 0.8); /* Ajoutez de la transparence pour voir le fond */
+    color: #fff;
+    padding: 10px 0;
+}
+
+#top-nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 100%; /* Assure que le conteneur ne dépasse pas la largeur de la page */
+}
+
+.custom-background-section {
+    background: none; /* Supprimez l'image de fond ici pour éviter les conflits */
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.custom-background-section .content {
+    max-width: 800px;
+    z-index: 10;
+}
+
+.custom-background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couche de superposition pour assombrir l'image */
+    z-index: 5;
+}
+
+.button--transparent--home {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 70px 15px 30px;
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 30px;
+    position: relative;
+    transition: all .5s;
+}
+
+.button--transparent--home:after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: url('/content/dam/fortinet/images/icons/hero-button-arrow.png');
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    margin-top: -3px;
+    transition: all .5s;
+}
+
+.button--transparent--home:hover:after {
+    background: url('/content/dam/fortinet/images/icons/hero-button-arrow-over.png');
+    right: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.button--transparent--home:hover {
+    background: #ddd;
+    color: #000;
+    transition: all .5s;
+}
+
+.top-toolbar {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-toolbar li {
+    margin: 0 15px;
+}
+
+.top-toolbar li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropbtn {
+    background-color: #343434;
+    color: rgb(251, 250, 250);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5f5a5a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Ajoutez de la transparence pour voir le fond */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Assure que les sections ne dépassent pas la largeur de la page */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Ajoutez de la transparence pour voir le fond */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
