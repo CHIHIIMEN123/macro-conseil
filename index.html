@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="ftnt-navigation">
-        <nav id="top-nav">
+    <header class="ftnt-navigation" role="banner">
+        <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
-                <button class="menu-toggle">Menu</button>
-                <ul class="top-toolbar nav-right">
+                <button class="menu-toggle" aria-controls="top-toolbar" aria-expanded="false">Menu</button>
+                <ul class="top-toolbar nav-right" id="top-toolbar">
                     <li><a href="#products">Products</a></li>
                     <li><a href="#solutions">Solutions</a></li>
                     <li><a href="#support">Support</a></li>
@@ -25,17 +25,17 @@
     </header>
 
     <main>
-        <section class="custom-background-section">
+        <section class="custom-background-section" role="region" aria-labelledby="main-title">
             <div class="content">
-                <h1 class="main-title">Welcome to MACRO Consulting <span class="break-line">&amp; Assistance</span></h1>
+                <h1 id="main-title" class="main-title">Welcome to MACRO Consulting <span class="break-line">&amp; Assistance</span></h1>
                 <p>We offer cutting-edge cybersecurity solutions tailored to your business needs.</p>
                 <a href="#services" class="button--transparent--home">Discover our services</a>
             </div>
         </section>
 
-        <section id="services" class="services-section">
+        <section id="services" class="services-section" role="region" aria-labelledby="services-title">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <h2 id="services-title" class="section-title">Our Services</h2>
                 <div class="service-grid">
                     <div class="service-card">
                         <div class="service-card-header">
@@ -119,11 +119,11 @@
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
+        <section id="contact" role="region" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
             <img src="images/contact-us.jpg" alt="Contact Us" class="responsive-img">
             <p>Protect your digital assets today by contacting us to discuss your cybersecurity needs.</p>
-            <form>
+            <form action="/submit-form" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -138,7 +138,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2025 MACRO Consulting & Assistance. All rights reserved.</p>
     </footer>
 
