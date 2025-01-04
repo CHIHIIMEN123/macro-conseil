@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const topToolbar = document.querySelector('.top-toolbar');
 
     menuToggle.addEventListener('click', function() {
-        const isExpanded = topToolbar.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', isExpanded);
+    const isExpanded = topToolbar.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 });

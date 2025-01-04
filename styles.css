@@ -172,7 +172,7 @@ a:hover, a:focus {
 @media (max-width: 768px) {
     .top-toolbar {
         flex-direction: column;
-        display: none;
+        display: none; /* Hide the menu by default */
         background-color: rgba(51, 51, 51, 0.9);
         position: absolute;
         top: 60px;
@@ -182,11 +182,11 @@ a:hover, a:focus {
     }
 
     .top-toolbar.show {
-        display: flex;
+        display: flex; /* Show the menu when activated */
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Show the menu button */
         background-color: #343434;
         color: #fff;
         padding: 10px;
@@ -200,7 +200,7 @@ a:hover, a:focus {
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Hide the menu button by default */
 }
 
 /* Services Section Styles */
