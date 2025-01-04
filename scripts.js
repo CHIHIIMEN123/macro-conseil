@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
+                observer.unobserve(entry.target); // Stop observing once in view
             }
         });
     }, {
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const topToolbar = document.querySelector('.top-toolbar');
 
     menuToggle.addEventListener('click', function() {
-        topToolbar.classList.toggle('show');
+        const isExpanded = topToolbar.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 });
