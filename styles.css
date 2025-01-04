@@ -1,19 +1,24 @@
 /* General Styles */
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
-    background-image: url('images/back.jpg'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
-    overflow-x: hidden; /* Empêche le défilement horizontal */
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1, h2, h3 {
@@ -21,10 +26,23 @@ h1, h2, h3 {
 }
 
 .main-title {
-    color: #fff; /* Change la couleur du texte en blanc */
-    font-weight: bold; /* Met le texte en gras */
-    font-size: 2.5em; /* Augmente la taille de la police */
-    white-space: nowrap; /* Empêche le retour à la ligne */
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5em;
+    white-space: normal; /* Allow line breaks */
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the block */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.break-line {
+    display: inline; /* Ensure it stays inline with the text */
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
 }
 
 a {
@@ -38,9 +56,21 @@ a:hover {
 
 /* Header Styles */
 .ftnt-navigation {
-    background-color: rgba(51, 51, 51, 0.8); /* Ajoutez de la transparence pour voir le fond */
+    background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     padding: 10px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.ftnt-navigation.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.9);
 }
 
 #top-nav .container {
@@ -48,11 +78,12 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    max-width: 100%; /* Assure que le conteneur ne dépasse pas la largeur de la page */
+    max-width: 100%;
 }
 
 .custom-background-section {
-    background: none; /* Supprimez l'image de fond ici pour éviter les conflits */
+    background: url('images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 700px;
     display: flex;
     align-items: center;
@@ -75,7 +106,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Couche de superposition pour assombrir l'image */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 5;
 }
 
@@ -178,45 +209,95 @@ a:hover {
     background-color: #555;
 }
 
-/* Main Content Styles */
-main {
-    padding: 20px;
+/* Services Section Styles */
+.services-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
 }
 
-section {
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
     margin-bottom: 40px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Ajoutez de la transparence pour voir le fond */
+    color: #333;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Assure que les sections ne dépassent pas la largeur de la page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-h1, h2 {
+.service-card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card-body {
+    padding: 20px;
+}
+
+.service-card-body p {
     margin-bottom: 20px;
+    color: #555;
 }
 
-h3 {
-    margin-top: 20px;
+.service-card-body ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-ul {
-    padding-left: 20px;
-}
-
-ul li {
+.service-card-body ul li {
     margin-bottom: 10px;
+    color: #333;
 }
 
 /* Form Styles */
 form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px; /* Ajoutez cette ligne pour créer un espace sous le formulaire */
 }
 
 form label {
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 0 20px; /* Ajoutez du padding à gauche et à droite */
+}
+
+#contact h2 {
+    margin-left: 20px; /* Ajoutez du margin à gauche pour le titre */
+}
+
+#contact form {
+    margin-left: 20px; /* Ajoutez du margin à gauche pour le formulaire */
 }
 
 form input, form textarea {
@@ -248,10 +329,10 @@ form button:hover {
 
 /* Footer Styles */
 footer {
-    background-color: rgba(51, 51, 51, 0.8); /* Ajoutez de la transparence pour voir le fond */
+    background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0; /* Augmentez le padding pour plus d'espace */
     position: fixed;
     width: 100%;
     bottom: 0;
