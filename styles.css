@@ -168,37 +168,6 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .top-toolbar {
-        flex-direction: column;
-        display: none; /* Hide the menu by default */
-        background-color: rgba(51, 51, 51, 0.9);
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        left: 0;
-        z-index: 1000;
-    }
-
-    .top-toolbar.show {
-        display: flex; /* Show the menu when activated */
-    }
-
-    .menu-toggle {
-        display: block; /* Show the menu button */
-        background-color: #343434;
-        color: #fff;
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 10px;
-    }
-}
-
 .menu-toggle {
     display: none; /* Hide the menu button by default */
 }
