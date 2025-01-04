@@ -76,10 +76,32 @@ a:hover, a:focus {
 
 #top-nav .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center vertically */
     max-width: 100%;
+}
+
+.company-logo {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.top-toolbar {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allows the menu to take up remaining space */
+}
+
+.top-toolbar li {
+    margin: 0 15px;
+}
+
+.top-toolbar li a {
+    color: #fff;
+    font-weight: bold;
 }
 
 .custom-background-section {
@@ -349,6 +371,22 @@ form button {
 
 form button:hover {
     background-color: #0056b3;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    margin-bottom: 20px; /* Ajoute un espace en dessous */
+}
+
+.company-logo {
+    max-width: 250px; /* Ajuste la taille du logo */
+    height: auto;
+    margin-right: 20px; /* Espace entre le logo et le texte */
+}
+
+.section-title {
+    margin: 0; /* Supprime la marge par défaut */
 }
 
 /* Footer Styles */
