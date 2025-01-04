@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.dropbtn');
-    const dropdownContent = document.querySelector('.dropdown-content');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const topToolbar = document.querySelector('.top-toolbar');
 
     menuToggle.addEventListener('click', function() {
-        dropdownContent.classList.toggle('show');
+        topToolbar.classList.toggle('show');
     });
 });

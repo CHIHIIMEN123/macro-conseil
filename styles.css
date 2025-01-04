@@ -7,8 +7,8 @@
 
 html, body {
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -29,19 +29,19 @@ h1, h2, h3 {
     color: #fff;
     font-weight: bold;
     font-size: 2.5em;
-    white-space: normal; /* Allow line breaks */
-    text-align: center; /* Center the text */
-    margin: 0 auto; /* Center the block */
-    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    white-space: normal;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .break-line {
-    display: inline; /* Ensure it stays inline with the text */
+    display: inline;
 }
 
 @media (max-width: 600px) {
     .main-title {
-        font-size: 2em; /* Adjust font size for smaller screens */
+        font-size: 2em;
     }
 }
 
@@ -152,6 +152,8 @@ a:hover {
 .top-toolbar {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -166,10 +168,7 @@ a:hover {
 }
 
 .dropdown {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
 }
 
 .dropbtn {
@@ -207,6 +206,41 @@ a:hover {
 
 .dropdown:hover .dropbtn {
     background-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-toolbar {
+        flex-direction: column;
+        display: none;
+        background-color: rgba(51, 51, 51, 0.9);
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .top-toolbar.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #343434;
+        color: #fff;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* Services Section Styles */
@@ -279,7 +313,7 @@ a:hover {
 form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px; /* Ajoutez cette ligne pour créer un espace sous le formulaire */
+    margin-bottom: 100px;
 }
 
 form label {
@@ -289,15 +323,15 @@ form label {
 
 /* Contact Section Styles */
 #contact {
-    padding: 0 20px; /* Ajoutez du padding à gauche et à droite */
+    padding: 0 20px;
 }
 
 #contact h2 {
-    margin-left: 20px; /* Ajoutez du margin à gauche pour le titre */
+    margin-left: 20px;
 }
 
 #contact form {
-    margin-left: 20px; /* Ajoutez du margin à gauche pour le formulaire */
+    margin-left: 20px;
 }
 
 form input, form textarea {
@@ -332,7 +366,7 @@ footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Augmentez le padding pour plus d'espace */
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
