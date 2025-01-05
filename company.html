@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Company - MACRO Consulting & Assistance</title>
     <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+    <meta name="referrer" content="no-referrer">
 </head>
 <body>
+    <!-- Header -->
     <header class="ftnt-navigation" role="banner">
         <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
-                <button class="menu-toggle" aria-controls="top-toolbar" aria-expanded="false">Menu</button>
+                <div class="mobile-nav">
+                    <button class="menu-toggle" aria-label="Mobile menu" aria-controls="top-toolbar" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
                 <ul class="top-toolbar nav-right" id="top-toolbar">
-                    <li><a href="index.html">Services</a></li> <!-- Lien vers la page d'accueil -->
+                    <li><a href="index.html">Services</a></li>
                     <li><a href="company.html">Company</a></li>
                     <li><a href="partners.html">Partners</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li> <!-- Lien vers la section Contact de l'index -->
+                    <li><a href="index.html#contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <main>
         <section id="company" role="region" aria-labelledby="company-title">
@@ -28,8 +38,8 @@
                 <!-- Logo and Title Container -->
                 <div class="logo-title-container">
                     <img src="images/company-logo.png" alt="Company Logo" class="company-logo">
-                    <h2 id="company-title" class="section-title">MACRO Consulting & Assistance</h2>
                 </div>
+                <h2 id="company-title" class="section-title">MACRO Consulting & Assistance</h2>
                 <p>We are committed to protecting our clients' digital assets by offering cutting-edge cybersecurity solutions tailored to the specific needs of each business. With recognized expertise in vulnerability management, securing IT and OT infrastructures, and cloud security, we provide strategic services to ensure the confidentiality, integrity, and availability of data.</p>
                 <p>Our mission is to strengthen companies' security and prepare them for the growing threats of the digital world by offering innovative solutions and personalized advice.</p>
                 

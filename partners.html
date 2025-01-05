@@ -4,46 +4,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Partners - MACRO Consulting & Assistance</title>
+    <title>Company - MACRO Consulting & Assistance</title>
     <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self';">
+    <meta name="referrer" content="no-referrer">
 </head>
 <body>
+    <!-- Header -->
     <header class="ftnt-navigation" role="banner">
         <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
-                <button class="menu-toggle" aria-controls="top-toolbar" aria-expanded="false">Menu</button>
+                <div class="mobile-nav">
+                    <button class="menu-toggle" aria-label="Mobile menu" aria-controls="top-toolbar" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
                 <ul class="top-toolbar nav-right" id="top-toolbar">
-                    <li><a href="index.html">Services</a></li> <!-- Lien vers la page d'accueil -->
+                    <li><a href="index.html">Services</a></li>
                     <li><a href="company.html">Company</a></li>
                     <li><a href="partners.html">Partners</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li> <!-- Lien vers la section Contact de l'index -->
+                    <li><a href="index.html#contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <main>
         <section id="partners" role="region" aria-labelledby="partners-title">
             <div class="container">
                 <h2 id="partners-title" class="section-title">Our Partners</h2>
                 <div class="partner-list">
-                    <a href="https://portswigger.net/burp" target="_blank" class="partner">
+                    <a href="https://portswigger.net/burp" target="_blank" class="partner" rel="noopener noreferrer">
                         <img src="images/burpsuite-logo.png" alt="Burpsuite Logo" class="medium-img">
                         <p>Burpsuite provides comprehensive security testing solutions for web applications.</p>
                     </a>
-                    <a href="https://www.tenable.com/" target="_blank" class="partner">
+                    <a href="https://www.tenable.com/" target="_blank" class="partner" rel="noopener noreferrer">
                         <img src="images/tenable-logo.png" alt="Tenable Logo" class="medium-img">
                         <p>Tenable offers vulnerability management solutions to help you identify and manage risks.</p>
                     </a>
-                    <a href="https://www.elastic.co/" target="_blank" class="partner">
+                    <a href="https://www.elastic.co/" target="_blank" class="partner" rel="noopener noreferrer">
                         <img src="images/elastic-stack-logo.png" alt="Elastic Stack Logo" class="medium-img">
                         <p>Elastic Stack provides powerful search and analytics capabilities for your data.</p>
                     </a>
-                    <a href="https://www.crowdstrike.com/" target="_blank" class="partner">
+                    <a href="https://www.crowdstrike.com/" target="_blank" class="partner" rel="noopener noreferrer">
                         <img src="images/crowdstrike-logo.png" alt="Crowdstrike Logo" class="medium-img">
                         <p>Crowdstrike delivers endpoint protection and threat intelligence solutions.</p>
                     </a>
-                    <a href="https://aws.amazon.com/" target="_blank" class="partner">
+                    <a href="https://aws.amazon.com/" target="_blank" class="partner" rel="noopener noreferrer">
                         <img src="images/aws-logo.png" alt="AWS Logo" class="medium-img">
                         <p>AWS offers a wide range of cloud computing services to support your business needs.</p>
                     </a>
@@ -56,6 +66,6 @@
         <p>&copy; 2025 MACRO Consulting & Assistance. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </body>
 </html>

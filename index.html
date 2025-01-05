@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Company - MACRO Consulting & Assistance</title>
     <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self';">
+    <meta name="referrer" content="no-referrer">
 </head>
 <body>
     <header class="ftnt-navigation" role="banner">
         <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
+                <div class="mobile-nav">
+                    <button class="menu-toggle" aria-label="Mobile menu" aria-controls="top-toolbar" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
                 <ul class="top-toolbar nav-right" id="top-toolbar">
                     <li><a href="index.html">Services</a></li>
                     <li><a href="company.html">Company</a></li>
@@ -139,6 +148,6 @@
         <p>&copy; 2025 MACRO Consulting & Assistance. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </body>
 </html>

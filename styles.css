@@ -39,12 +39,6 @@ h1, h2, h3 {
     display: inline;
 }
 
-@media (max-width: 600px) {
-    .main-title {
-        font-size: 2em;
-    }
-}
-
 a {
     color: #007BFF;
     text-decoration: none;
@@ -171,6 +165,7 @@ a:hover, a:focus {
 
 .map-container {
     margin-top: 20px;
+    margin-bottom: 100px; /* Add space below the map */
     max-width: 100%;
     overflow: hidden;
 }
@@ -251,8 +246,53 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
+/* Mobile Menu Styles */
 .menu-toggle {
-    display: none; /* Hide the menu button by default */
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .top-toolbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.9);
+        padding: 10px 0;
+        z-index: 1000;
+        align-items: flex-start; /* Align items to the top left */
+        padding-left: 20px; /* Add some padding to the left for spacing */
+    }
+
+    .top-toolbar.show {
+        display: flex;
+    }
+
+    .top-toolbar li {
+        margin: 10px 0;
+    }
 }
 
 /* Services Section Styles */
@@ -380,7 +420,7 @@ form button:hover {
 }
 
 .company-logo {
-    max-width: 250px; /* Ajuste la taille du logo */
+    max-width: 300px; /* Ajuste la taille du logo */
     height: auto;
     margin-right: 20px; /* Espace entre le logo et le texte */
 }
@@ -389,12 +429,14 @@ form button:hover {
     margin: 0; /* Supprime la marge par défaut */
 }
 
+
+
 /* Footer Styles */
 footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0 20px; /* Add padding to the top */
     position: fixed;
     width: 100%;
     bottom: 0;
