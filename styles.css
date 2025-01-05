@@ -183,11 +183,14 @@ a:hover, a:focus {
     display: block;
     margin: 0 auto; /* Center the image */
 }
+
+/* Partners */
 .partner-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Deux colonnes */
-    gap: 20px; /* Espace entre les cartes */
-    justify-content: center; /* Centrer les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Two columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the elements */
+    margin-bottom: 60px; /* Add space below the partner list */
 }
 
 .partner {
@@ -216,17 +219,7 @@ a:hover, a:focus {
     color: #333;
 }
 
-.button--transparent--home:hover:after {
-    background: url('/content/dam/fortinet/images/icons/hero-button-arrow-over.png');
-    right: 15px;
-    transition: all .3s ease-in-out;
-}
 
-.button--transparent--home:hover {
-    background: #ddd;
-    color: #000;
-    transition: all .5s;
-}
 
 .top-toolbar {
     list-style: none;
@@ -297,13 +290,13 @@ a:hover, a:focus {
 
 /* Services Section Styles */
 .services-section {
-    padding: 50px 0;
-    background-color: #f4f4f4;
+    padding: 60px 20px; /* Increased padding for more breathing space */
+    background-color: #f9f9f9; /* Slightly lighter background for a cleaner look */
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem; /* Consistent font size unit */
     margin-bottom: 40px;
     color: #333;
 }
@@ -319,7 +312,7 @@ a:hover, a:focus {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -327,7 +320,6 @@ a:hover, a:focus {
 .service-card.in-view {
     opacity: 1;
     transform: translateY(0);
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
 
 .service-card:hover {
@@ -340,6 +332,7 @@ a:hover, a:focus {
     color: #fff;
     padding: 20px;
     text-align: center;
+    font-weight: bold; /* Added bold for emphasis */
 }
 
 .service-card-body {
@@ -349,6 +342,7 @@ a:hover, a:focus {
 .service-card-body p {
     margin-bottom: 20px;
     color: #555;
+    line-height: 1.6; /* Improved readability */
 }
 
 .service-card-body ul {
@@ -359,8 +353,22 @@ a:hover, a:focus {
 .service-card-body ul li {
     margin-bottom: 10px;
     color: #333;
+    position: relative;
+    padding-left: 20px; /* Space for icon */
 }
 
+.service-card-body ul li:before {
+    content: '•'; /* Bullet point */
+    position: absolute;
+    left: 0;
+    color: #007BFF; /* Accent color for bullet */
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
 /* Form Styles */
 form {
     display: flex;
