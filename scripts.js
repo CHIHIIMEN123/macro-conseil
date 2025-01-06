@@ -48,4 +48,37 @@ document.addEventListener("DOMContentLoaded", function() {
         const isExpanded = topToolbar.classList.toggle('show');
         menuToggle.setAttribute('aria-expanded', isExpanded);
     });
+
+    // Animated Number Counter
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            element.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Check if elements are in view before starting animation
+    const counters = document.querySelectorAll('.elementor-counter-number');
+    const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const endValue = parseFloat(element.getAttribute('data-to-value'));
+                animateValue(element, 0, endValue, 2000);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
 });

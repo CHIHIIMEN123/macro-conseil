@@ -142,13 +142,134 @@ a:hover, a:focus {
     content: '';
     width: 26px;
     height: 26px;
-    background: url('/content/dam/fortinet/images/icons/hero-button-arrow.png');
+    background: url('images/back.jpg');
     display: inline-block;
     position: absolute;
     right: 20px;
     margin-top: -3px;
     transition: all .5s;
 }
+
+/* Impact Section Styles */
+.impact-section {
+    background-image: url('images/99.png'); /* Remplacez 'your-image.jpg' par le nom de votre fichier image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This creates the parallax effect */
+    padding: 50px 20px;
+    color: #000000; /* Ensures text is white */
+}
+
+.section-title {
+    color: #ede6e6; /* Ensures the title is white */
+}
+
+.impact-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.impact-item {
+    text-align: center;
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background for readability */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.elementor-counter-number-wrapper {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Ensures the text is white */
+}
+
+.elementor-counter-title {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff; /* Ensures the text is white */
+}
+
+.separator {
+    width: 2px;
+    background-color: #ccc;
+    height: 50px;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .impact-row {
+        flex-direction: column;
+    }
+    .separator {
+        display: none;
+    }
+}
+
+/**/
+
+.elementor-image-box-wrapper {
+    padding: 20px;
+    background: #ecdddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.elementor-image-box-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.elementor-image-box-description {
+    color: #555;
+    line-height: 1.6;
+}
+
+.elementor-button-wrapper {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.elementor-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementor-button:hover {
+    background-color: #0056b3;
+}
+
+
+/**/
+.animated-text {
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /*Contact*/
 .contact-info {
@@ -434,6 +555,13 @@ form button:hover {
     margin: 0; /* Supprime la marge par défaut */
 }
 
+
+
+.custom-background-section {
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 270s infinite;
+  }
 
 
 /* Footer Styles */
