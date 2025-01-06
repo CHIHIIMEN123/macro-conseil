@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Company - MACRO Consulting & Assistance</title>
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self';">
+    <!-- Amélioration de la politique de sécurité du contenu -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
     <meta name="referrer" content="no-referrer">
 </head>
 <body>
@@ -14,10 +15,10 @@
         <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
                 <div class="mobile-nav">
-                    <button class="menu-toggle" aria-label="Mobile menu" aria-controls="top-toolbar" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <button class="menu-toggle" aria-label="Toggle mobile menu" aria-controls="top-toolbar" aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
                     </button>
                 </div>
                 <ul class="top-toolbar nav-right" id="top-toolbar">
@@ -43,10 +44,10 @@
             <div class="container">
                 <h2 id="services-title" class="section-title">Our Services</h2>
                 <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>Vulnerability Management</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Proactive vulnerability management to identify, analyze, and fix security flaws in your IT and OT infrastructure.</p>
                             <ul>
@@ -55,11 +56,11 @@
                                 <li>Action plans for remediation.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    </article>
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>Risk Assessment</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Risk assessments to determine potential threats and their impact on your business.</p>
                             <ul>
@@ -68,11 +69,11 @@
                                 <li>Risk mitigation strategies.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    </article>
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>Security Audit & Compliance</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Comprehensive security audits to assess your compliance with cybersecurity standards and industry regulations.</p>
                             <ul>
@@ -81,11 +82,11 @@
                                 <li>Non-compliance reports and recommendations.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    </article>
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>Incident Management</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Managing security incidents to quickly and effectively identify, contain, and resolve attacks.</p>
                             <ul>
@@ -94,11 +95,11 @@
                                 <li>Recovery and repair of compromised systems.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    </article>
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>Cloud Security</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Securing cloud environments to ensure the protection of sensitive data in cloud infrastructures.</p>
                             <ul>
@@ -107,11 +108,11 @@
                                 <li>Data and application protection in the cloud.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card-header">
+                    </article>
+                    <article class="service-card">
+                        <header class="service-card-header">
                             <h3>IoT and OT Security</h3>
-                        </div>
+                        </header>
                         <div class="service-card-body">
                             <p>Securing IoT and OT systems to prevent unauthorized access and protect critical networks.</p>
                             <ul>
@@ -120,27 +121,29 @@
                                 <li>Management of vulnerabilities specific to OT and IoT environments.</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="contact" role="region" aria-labelledby="contact-title">
-            <h2 id="contact-title">Contact Us</h2>
-            <img src="images/contact-us.jpg" alt="Contact Us" class="responsive-img">
-            <p>Protect your digital assets today by contacting us to discuss your cybersecurity needs.</p>
-            <form action="/submit-form" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
+            <div class="container">
+                <h2 id="contact-title">Contact Us</h2>
+                <img src="images/contact-us.jpg" alt="Contact Us" class="responsive-img">
+                <p>Protect your digital assets today by contacting us to discuss your cybersecurity needs.</p>
+                <form action="/submit-form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -163,7 +166,7 @@
                 <ul>
                     <li><a href="Data Protection Best Practices.html">Data Protection Best Practices</a></li>
                     <li><a href="Industry News.html">Industry News</a></li>
-                    <li><a href="cybersecurity News.html">cybersecurity News</a></li>
+                    <li><a href="cybersecurity News.html">Cybersecurity News</a></li>
                     <li><a href="FAQs.html">FAQs</a></li>
                 </ul>
             </div>
