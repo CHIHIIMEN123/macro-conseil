@@ -70,19 +70,19 @@ a:hover, a:focus {
 
 #top-nav .container {
     display: flex;
-    justify-content: space-between; /* Space between logo and menu */
-    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
 }
 
 .top-toolbar {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the menu items */
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-grow: 1; /* Allows the menu to take up remaining space */
+    flex-grow: 1;
 }
 
 .top-toolbar li {
@@ -94,6 +94,7 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
+/* Custom Background Section */
 .custom-background-section {
     background: url('images/back.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -137,12 +138,16 @@ a:hover, a:focus {
     position: relative;
     transition: all .5s;
 }
+.button--transparent--home:hover {
+    /* Change the background color to gray on hover */
+    background-color: rgb(30, 30, 30);
+
+}
 
 .button--transparent--home:after {
     content: '';
     width: 26px;
     height: 26px;
-    background: url('images/back.jpg');
     display: inline-block;
     position: absolute;
     right: 20px;
@@ -152,17 +157,20 @@ a:hover, a:focus {
 
 /* Impact Section Styles */
 .impact-section {
-    background-image: url('images/99.png'); /* Remplacez 'your-image.jpg' par le nom de votre fichier image */
+    background-image: url('images/de.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* This creates the parallax effect */
+    background-attachment: fixed;
     padding: 50px 20px;
-    color: #000000; /* Ensures text is white */
+    color: #ffffff;
 }
-
+#impact-title {
+    color: #fff; /* Sets the text color to white */
+    font-weight: bold; /* Makes the text bold */
+}
 .section-title {
-    color: #ede6e6; /* Ensures the title is white */
+    color: #ede6e6;
 }
 
 .impact-row {
@@ -176,7 +184,7 @@ a:hover, a:focus {
 .impact-item {
     text-align: center;
     margin: 0 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background for readability */
+    background-color: rgba(30, 30, 30, 0.5);
     padding: 10px;
     border-radius: 8px;
 }
@@ -184,13 +192,13 @@ a:hover, a:focus {
 .elementor-counter-number-wrapper {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff; /* Ensures the text is white */
+    color: #fff;
 }
 
 .elementor-counter-title {
     font-weight: bold;
     margin-top: 10px;
-    color: #fff; /* Ensures the text is white */
+    color: #fff;
 }
 
 .separator {
@@ -209,69 +217,7 @@ a:hover, a:focus {
     }
 }
 
-/**/
-
-.elementor-image-box-wrapper {
-    padding: 20px;
-    background: #ecdddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.elementor-image-box-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.elementor-image-box-description {
-    color: #555;
-    line-height: 1.6;
-}
-
-.elementor-button-wrapper {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.elementor-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.elementor-button:hover {
-    background-color: #0056b3;
-}
-
-
-/**/
-.animated-text {
-    opacity: 0;
-    animation: fadeInUp 2s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/*Contact*/
+/* Contact Section Styles */
 .contact-info {
     margin-top: 20px;
     font-size: 16px;
@@ -283,7 +229,7 @@ a:hover, a:focus {
 
 .map-container {
     margin-top: 20px;
-    margin-bottom: 100px; /* Add space below the map */
+    margin-bottom: 100px;
     max-width: 100%;
     overflow: hidden;
 }
@@ -295,20 +241,20 @@ a:hover, a:focus {
 }
 
 .medium-img {
-    width: 400px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 200%; /* Ensure responsiveness */
+    width: 400px;
+    height: auto;
+    max-width: 200%;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
 
-/* Partners */
+/* Partners Section */
 .partner-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Two columns */
-    gap: 20px; /* Space between cards */
-    justify-content: center; /* Center the elements */
-    margin-bottom: 60px; /* Add space below the partner list */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 
 .partner {
@@ -335,26 +281,6 @@ a:hover, a:focus {
 .partner p {
     margin: 0;
     color: #333;
-}
-
-
-
-.top-toolbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.top-toolbar li {
-    margin: 0 15px;
-}
-
-.top-toolbar li a {
-    color: #fff;
-    font-weight: bold;
 }
 
 /* Mobile Menu Styles */
@@ -387,14 +313,14 @@ a:hover, a:focus {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on your header height */
+        top: 60px;
         left: 0;
         right: 0;
         background-color: rgba(51, 51, 51, 0.9);
         padding: 10px 0;
         z-index: 1000;
-        align-items: flex-start; /* Align items to the top left */
-        padding-left: 20px; /* Add some padding to the left for spacing */
+        align-items: flex-start;
+        padding-left: 20px;
     }
 
     .top-toolbar.show {
@@ -408,13 +334,13 @@ a:hover, a:focus {
 
 /* Services Section Styles */
 .services-section {
-    padding: 60px 20px; /* Increased padding for more breathing space */
-    background-color: #f9f9f9; /* Slightly lighter background for a cleaner look */
+    padding: 60px 20px;
+    background-color: #f9f9f9;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem; /* Consistent font size unit */
+    font-size: 2.5rem;
     margin-bottom: 40px;
     color: #333;
 }
@@ -450,7 +376,7 @@ a:hover, a:focus {
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-weight: bold; /* Added bold for emphasis */
+    font-weight: bold;
 }
 
 .service-card-body {
@@ -460,7 +386,7 @@ a:hover, a:focus {
 .service-card-body p {
     margin-bottom: 20px;
     color: #555;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
 }
 
 .service-card-body ul {
@@ -472,21 +398,22 @@ a:hover, a:focus {
     margin-bottom: 10px;
     color: #333;
     position: relative;
-    padding-left: 20px; /* Space for icon */
+    padding-left: 20px;
 }
 
 .service-card-body ul li:before {
-    content: '•'; /* Bullet point */
+    content: '•';
     position: absolute;
     left: 0;
-    color: #007BFF; /* Accent color for bullet */
+    color: #007BFF;
 }
 
 @media (max-width: 768px) {
     .service-grid {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
+
 /* Form Styles */
 form {
     display: flex;
@@ -499,31 +426,11 @@ form label {
     font-weight: bold;
 }
 
-/* Contact Section Styles */
-#contact {
-    padding: 0 20px;
-}
-
-#contact h2 {
-    margin-left: 20px;
-}
-
-#contact form {
-    margin-left: 20px;
-}
-
 form input, form textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
 }
 
 form button {
@@ -539,34 +446,9 @@ form button:hover {
     background-color: #0056b3;
 }
 
-.logo-title-container {
-    display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-    margin-bottom: 20px; /* Ajoute un espace en dessous */
-}
-
-.company-logo {
-    max-width: 300px; /* Ajuste la taille du logo */
-    height: auto;
-    margin-right: 20px; /* Espace entre le logo et le texte */
-}
-
-.section-title {
-    margin: 0; /* Supprime la marge par défaut */
-}
-
-
-
-.custom-background-section {
-    background-size: cover;
-    background-position: center;
-    animation: changeBackground 270s infinite;
-  }
-
-
 /* Footer Styles */
 footer {
-    background-color: #1a1a1a; /* Darker background for a modern look */
+    background-color: #1a1a1a;
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -579,8 +461,8 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Space out content evenly */
-    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .footer-nav ul, .footer-interest ul {
@@ -593,23 +475,23 @@ footer {
 }
 
 .footer-nav ul li, .footer-interest ul li {
-    margin: 0 15px; /* Increased margin for better spacing */
+    margin: 0 15px;
 }
 
 .footer-nav a, .footer-interest a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    transition: color 0.3s;
 }
 
 .footer-nav a:hover, .footer-interest a:hover {
-    color: #007BFF; /* Blue color on hover for a modern touch */
+    color: #007BFF;
     text-decoration: underline;
 }
 
 .footer-interest {
-    flex: 1 1 300px; /* Flex properties for responsive design */
+    flex: 1 1 300px;
     margin-top: 20px;
 }
 
