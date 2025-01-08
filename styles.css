@@ -19,6 +19,7 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -138,10 +139,9 @@ a:hover, a:focus {
     position: relative;
     transition: all .5s;
 }
-.button--transparent--home:hover {
-    /* Change the background color to gray on hover */
-    background-color: rgb(30, 30, 30);
 
+.button--transparent--home:hover {
+    background-color: rgb(30, 30, 30);
 }
 
 .button--transparent--home:after {
@@ -165,12 +165,17 @@ a:hover, a:focus {
     padding: 50px 20px;
     color: #ffffff;
 }
+
 #impact-title {
-    color: #fff; /* Sets the text color to white */
-    font-weight: bold; /* Makes the text bold */
+    color: #fff;
+    font-weight: bold;
 }
+
 .section-title {
-    color: #ede6e6;
+    color: #343434;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .impact-row {
@@ -208,15 +213,6 @@ a:hover, a:focus {
     margin: 0 20px;
 }
 
-@media (max-width: 768px) {
-    .impact-row {
-        flex-direction: column;
-    }
-    .separator {
-        display: none;
-    }
-}
-
 /* Contact Section Styles */
 .contact-info {
     margin-top: 20px;
@@ -243,7 +239,7 @@ a:hover, a:focus {
 .medium-img {
     width: 400px;
     height: auto;
-    max-width: 200%;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -251,7 +247,7 @@ a:hover, a:focus {
 /* Partners Section */
 .partner-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
     margin-bottom: 60px;
@@ -304,45 +300,10 @@ a:hover, a:focus {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .top-toolbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: rgba(51, 51, 51, 0.9);
-        padding: 10px 0;
-        z-index: 1000;
-        align-items: flex-start;
-        padding-left: 20px;
-    }
-
-    .top-toolbar.show {
-        display: flex;
-    }
-
-    .top-toolbar li {
-        margin: 10px 0;
-    }
-}
-
 /* Services Section Styles */
 .services-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
 }
 
 .service-grid {
@@ -406,12 +367,6 @@ a:hover, a:focus {
     position: absolute;
     left: 0;
     color: #007BFF;
-}
-
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Form Styles */
@@ -505,7 +460,67 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 2em;
+    }
+
+    .custom-background-section {
+        min-height: 500px;
+    }
+
+    .button--transparent--home {
+        padding: 10px 50px 10px 20px;
+        font-size: 16px;
+    }
+
+    .impact-row {
+        flex-direction: column;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .partner-list {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .top-toolbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.9);
+        padding: 10px 0;
+        z-index: 1000;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .top-toolbar.show {
+        display: flex;
+    }
+
+    .top-toolbar li {
+        margin: 10px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -514,4 +529,75 @@ footer {
     .footer-nav, .footer-interest {
         text-align: center;
     }
+
+    .footer-nav ul, .footer-interest ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li, .footer-interest ul li {
+        margin: 5px 0;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-title {
+        font-size: 1.8em;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .button--transparent--home {
+        padding: 8px 40px 8px 15px;
+        font-size: 14px;
+    }
+
+    .partner img {
+        width: 80px;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve layout for company page */
+.logo-title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+#company-title {
+    margin-top: 20px;
+}
+
+.company-description {
+    margin-bottom: 30px;
+}
+
+/* Ensure the layout is flexible */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
