@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Company - MACRO Consulting & Assistance</title>
+    <title>MACRO Consulting & Assistance - Cybersecurity Solutions</title>
+    <meta name="description" content="MACRO Consulting & Assistance offers cutting-edge cybersecurity solutions tailored to your business needs.">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="boostrap/bootstrap.min.css" as="style">
+    <link rel="preload" href="boostrap/mdb.min.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="images/logo.png" as="image">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <!-- MDB CSS -->
     <link rel="stylesheet" href="boostrap/mdb.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
     <meta name="referrer" content="no-referrer">
@@ -19,6 +27,9 @@
     <header class="ftnt-navigation" role="banner">
         <nav id="top-nav" aria-label="Main Navigation">
             <div class="container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="MACRO Consulting & Assistance Logo" class="logo" width="150" height="50">
+                </a>
                 <div class="mobile-nav">
                     <button class="menu-toggle" aria-label="Toggle mobile menu" aria-controls="top-toolbar" aria-expanded="false">
                         <span class="bar"></span>
@@ -26,7 +37,7 @@
                         <span class="bar"></span>
                     </button>
                 </div>
-                <ul class="top-toolbar nav-right" id="top-toolbar">
+                <ul class="top-toolbar" id="top-toolbar">
                     <li><a href="index.html">Services</a></li>
                     <li><a href="company.html">Company</a></li>
                     <li><a href="partners.html">Partners</a></li>
