@@ -199,7 +199,7 @@ main {
 .custom-background-section::before {
     content: '';
     position: absolute;
-    top: 0; /* Ensure the overlay covers the entire section */
+    top: 1; /* Ensure the overlay covers the entire section */
     left: 0;
     right: 0;
     bottom: 0;
