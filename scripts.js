@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index < text.length) {
             titleElement.innerHTML += text.charAt(index);
             index++;
-            setTimeout(typeWriter, 70); // Adjust speed here
+            setTimeout(typeWriter, 50); // Adjust speed here
         } else {
             // Once the title is fully displayed, show the intro text
             introText.style.opacity = 1;
