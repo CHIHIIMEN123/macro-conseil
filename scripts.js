@@ -91,7 +91,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    
+    // Animation de type "machine à écrire" pour le titre
+    const text = "Welcome to MACRO Consulting & Assistance";
+    const titleElement = document.getElementById("main-title");
+    const introText = document.getElementById("intro-text");
+    const button = document.querySelector('.button--transparent--home');
+    let index = 0;
 
-    
+    function typeWriter() {
+        if (index < text.length) {
+            titleElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 70); // Adjust speed here
+        } else {
+            // Once the title is fully displayed, show the intro text
+            introText.style.opacity = 1;
+            setTimeout(() => {
+                // Then show the button
+                button.style.opacity = 1;
+            }, 500); // Delay for button appearance
+        }
+    }
+
+    typeWriter();
 });
