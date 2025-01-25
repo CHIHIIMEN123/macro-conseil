@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company - MACRO Consulting & Assistance</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+    <meta name="referrer" content="no-referrer">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+        .hero {
+            background: url('images/risk a.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: bold;
+            color: aliceblue;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        section {
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #164577;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align:left;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta p {
+        margin-bottom: 20px; /* Add space below the paragraph */
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .nist-steps {
+            
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+
+        .nist-steps p {
+        margin-bottom: 30px; /* Add space after the paragraph */
+        }
+
+        .nist-steps .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nist-steps h2 {
+            
+            color:  #164577;
+        }
+
+        .nist-steps .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Affiche 3 cases par ligne */
+        gap: 20px; /* Espace entre les cases */
+        margin-bottom: 30px;
+        justify-items: center; /* Centre les éléments dans chaque case */
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        
+        }
+
+        .step {
+            background-color: rgb(255, 254, 254);
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+        .nist-steps .steps {
+            grid-template-columns: 1fr; /* 2 cases sur les petits écrans */
+             }
+        }
+    </style>
+</head>
+<body>
+    <header class="ftnt-navigation" role="banner">
+        <nav id="top-nav" aria-label="Main Navigation">
+            <div class="container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="MACRO Consulting & Assistance Logo" class="logo">
+                </a>
+                <div class="mobile-nav">
+                    <button class="menu-toggle" aria-label="Toggle mobile menu" aria-controls="top-toolbar" aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="top-toolbar" id="top-toolbar">
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>IT & IoT Security Services</h1>
+                <p>Comprehensive IT and IoT security services to secure your digital assets, networks, and critical infrastructures.</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <h2>What is IT & IoT Security?</h2>
+                <p>In today’s interconnected world, IT and IoT security are essential to protect your systems, devices, and networks from cyber threats. We focus on securing your IT infrastructure as well as Internet of Things (IoT) devices and operational technologies (OT), ensuring compliance with industry standards and regulations.</p>
+            </div>
+        </section>
+
+        <section class="iot-ot-steps">
+            <div class="container">
+                <h2>IT & IoT Security Process</h2>
+                <p>Our IT & IoT security approach covers key aspects to ensure the integrity, availability, and confidentiality of your networks and devices.</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <h3>Identify</h3>
+                        <ul>
+                            <li>Assess IT infrastructure and IoT devices for vulnerabilities.</li>
+                            <li>Evaluate risks and security requirements based on industry standards.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Protect</h3>
+                        <ul>
+                            <li>Implement security controls for IoT devices and OT systems.</li>
+                            <li>Ensure secure device configurations, access control, and encryption.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Detect</h3>
+                        <ul>
+                            <li>Monitor IoT devices and OT networks for malicious activities.</li>
+                            <li>Identify potential breaches or anomalies in real-time.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Respond</h3>
+                        <ul>
+                            <li>Develop incident response protocols for IoT and OT environments.</li>
+                            <li>Ensure quick containment and remediation of security incidents.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Recover</h3>
+                        <ul>
+                            <li>Design disaster recovery plans for IT and OT systems.</li>
+                            <li>Minimize downtime and restore services after an incident.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Start Securing Your IT & IoT Systems Today</h2>
+                <p>Contact us to learn more about how our IT and IoT security services can help protect your business from emerging cyber threats.</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 MACRO Consulting & Assistance. All rights reserved.</p>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="Tunisian Regulations.html" target="_blank" rel="noopener noreferrer">Tunisian Regulations</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                </ul>
+            </nav>
+    
+            <!-- "Also of Interest" Section -->
+            <div class="footer-interest">
+                <p>Also of Interest:</p>
+                <ul>
+                    <li><a href="https://cyber.gouv.fr/bonnes-pratiques-protegez-vous" target="_blank" rel="noopener noreferrer">Cyber Security Best Practices</a></li>
+                    <li><a href="https://gdpr-info.eu/" target="_blank" rel="noopener noreferrer">General Data Protection Regulation</a></li>
+                    <li><a href="https://thehackernews.com" target="_blank" rel="noopener noreferrer">Cybersecurity News</a></li>
+                    <li><a href="https://industrytoday.com/" target="_blank" rel="noopener noreferrer">Industry News</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
